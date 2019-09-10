@@ -1,4 +1,4 @@
-package com.example.wordgen;
+package com.example.mnnvocab;
 
 import android.content.Context;
 import android.util.Log;
@@ -28,7 +28,7 @@ public class RandomWordGenerator {
 
     public void readWeatherData() {
         // Read the raw csv file
-        InputStream is = context.getResources().openRawResource(R.raw.words);
+        InputStream is = context.getResources().openRawResource(R.raw.mnnvocab);
 
         // Reads text from character-input stream, buffering characters for efficient reading
         BufferedReader reader = new BufferedReader(

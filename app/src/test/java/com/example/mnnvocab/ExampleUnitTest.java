@@ -1,4 +1,4 @@
-package com.example.wordgen;
+package com.example.mnnvocab;
 
 import org.junit.Test;
 

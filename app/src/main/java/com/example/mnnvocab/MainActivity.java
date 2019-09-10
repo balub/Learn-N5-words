@@ -1,6 +1,6 @@
-package com.example.wordgen;
+package com.example.mnnvocab;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         sentBtn = (Button) findViewById(R.id.sentBtn);
         meanTxt = (TextView) findViewById(R.id.meanTxt);
         meanTxt.setVisibility(View.INVISIBLE);
-        InputStream is = getResources().openRawResource(R.raw.words);
+        InputStream is = getResources().openRawResource(R.raw.mnnvocab);
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(is, Charset.forName("UTF-8"))
         );
@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
             while ((line = reader.readLine()) != null) {
                 String[] tokens = line.split(",");
                 XML_Data sample = new XML_Data();
-                sample.setWORD(tokens[0]);
-                sample.setDEFINITION(tokens[1]);
+                sample.setWORD(tokens[1]);
+                sample.setDEFINITION(tokens[2]);
 
                 Words.add(sample);
 
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         randomGenbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DispWord = w1.get(new Random().nextInt(1162));
+                DispWord = w1.get(new Random().nextInt(971));
                 randomWord.setText(DispWord);
                 meanTxt.setVisibility(View.INVISIBLE);
             }

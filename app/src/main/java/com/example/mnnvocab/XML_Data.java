@@ -1,4 +1,4 @@
-package com.example.wordgen;
+package com.example.mnnvocab;
 
 public class XML_Data {
     public String getWORD() {
